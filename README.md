@@ -4,6 +4,10 @@ Basic authentication using [JWT (JSON web tokens)](https://jwt.io/) - token secr
 
 Uses [MongoDB Atlas](https://cloud.mongodb.com/) (cloud database) - connection string in `.env` file.
 
+### How it works
+
+You get a JWT when you login. Attach it to the header(`auth-token`) when making requests and decode it server side to map requests to a specific user.
+
 ### Structure
 
 `index.js` - server, DB connection - uses *express*, *mongoose*, *dotenv*
