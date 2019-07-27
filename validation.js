@@ -10,8 +10,8 @@ const registerValidation = (data) => {
         password: Joi.string().min(6).max(1024).required()
     }
     return Joi.validate(data, schema);
-}
-;
+};
+
 const loginValidation = (data) => {
     const schema = {
         email: Joi.string().min(6).max(255).required().email(),
